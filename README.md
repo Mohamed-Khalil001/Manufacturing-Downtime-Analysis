@@ -1,8 +1,6 @@
-![image](https://github.com/user-attachments/assets/7f49b600-697c-42ef-a231-44c4f9e11d5d)
-![image](https://github.com/user-attachments/assets/c0e2561a-85b0-4036-a40e-968bff5e461e)
-![image](https://github.com/user-attachments/assets/b36c127e-6f8f-4ec3-88b5-eaa32c47f2e4)
+![image](https://github.com/user-attachments/assets/b36c127e-6f8f-4ec3-88b5-eaa32c47f2e4) ![image](https://github.com/user-attachments/assets/c05601f8-051c-49c0-95a3-a62e950a21a4)
 
-# 🏭 Manufacturing Downtime Insights
+# Manufacturing Downtime
 
 This project analyzes the **weekly operational and financial performance** of a medium-sized beverage manufacturing plant.  
 Using a dataset from [Kaggle](https://www.kaggle.com/datasets/agungpambudi/predict-manufacturing-downtime-performance-dataset), we explore **production batches**, **downtime events**, and their **financial impact**.
@@ -11,24 +9,37 @@ The goal is to **identify high-cost downtime causes** and deliver actionable ins
 
 ---
 
-## ![image](https://github.com/user-attachments/assets/d55f9689-9fe7-4a1e-ba23-c284b0d992e5) Project Structure
+## 📂 Project Structure
 
-The analysis is structured into **five key stages**, each building on the previous:
+The repository is organized as follows:
+```
+Investment-Dashboards/
+│
+├── 🔹Stage 1: Importing, Cleaning, and Preparing the Data/
+│   ├── investment_data.xlsx
+│
+├── 🔹Stage 2: Modeling/
+│   ├── investment_report.pbix
+│
+├── 🔹Stage 3: Data Transformation for Analysis/
+│   ├── market_overview.png
+│   ├── financial_performance.png
+│   ├── sector_analysis.png
+│   ├── final_story.png
+│
+├── 🔹Stage 4: Data Visualization/
+│   ├── story.pdf
+│   ├── insights_and_recommendations.pdf
+|
+├── 🔹Stage 5: Data Insights and Story/
+│   ├── story.pdf
+│   ├── insights_and_recommendations.pdf
+|
+├── 🔹FINAL PRESENTATION /
+│   ├── story.pdf
+│   ├── insights_and_recommendations.pdf
 
-1. **📥 Stage 1: Importing & Cleaning**  
-   Load raw data, clean and standardize formats, and resolve inconsistencies.
-
-2. **🧠 Stage 2: Modeling**  
-   Define relationships between tables to create a unified, queryable data model.
-
-3. **🔧 Stage 3: Data Transformation**  
-   Calculate financial metrics such as lost revenue and downtime cost using DAX.
-
-4. **📊 Stage 4: Visualization**  
-   Design intuitive dashboards and charts to highlight key performance indicators.
-
-5. **🔍 Stage 5: Insights & Recommendations**  
-   Identify root causes, detect patterns, and propose efficiency improvements.
+```
 ---
 ---
 ## ![image](https://github.com/user-attachments/assets/e266c9c7-bc69-4535-b1d7-71d44eb093cb) Stage 1: Importing, Cleaning, and Preparing the Data
