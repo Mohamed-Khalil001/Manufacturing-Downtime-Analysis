@@ -25,25 +25,23 @@ Investment-Dashboards/
 │   ├── metadata.csv
 │
 ├── 🔹Stage 2: Modeling/
-│   ├── investment_report.pbix
+│   ├── Modeling.md
 │
 ├── 🔹Stage 3: Data Transformation for Analysis/
-│   ├── market_overview.png
-│   ├── financial_performance.png
-│   ├── sector_analysis.png
-│   ├── final_story.png
+│   ├── Transformation.md
 │
 ├── 🔹Stage 4: Data Visualization/
-│   ├── story.pdf
-│   ├── insights_and_recommendations.pdf
+│   ├── 1-overview .png
+│   ├── 2-insights.png
+│   ├── Manufacturing-Downtime-Analysis.pbix
 |
 ├── 🔹Stage 5: Data Insights and Story/
 │   ├── story.pdf
 │   ├── insights_and_recommendations.pdf
 |
 ├── 🔹FINAL PRESENTATION /
-│   ├── story.pdf
-│   ├── insights_and_recommendations.pdf
+│   ├── Manufacturing Downtime.pptx
+│ 
 
 ```
 ---
