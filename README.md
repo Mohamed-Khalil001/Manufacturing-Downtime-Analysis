@@ -311,16 +311,18 @@ This page provides a high-level overview of weekly performance, focusing on fina
     ```
   - **Total Downtime Events**:
     ```dax
-    Total Downtime Events = COUNTROWS('Line Downtime')
+    Number of Downtime Events = CALCULATE(
+    COUNTROWS('Line-Downtime'),
+    'line-downtime'[Downtime(min)] > 0)
     ```
   - **Top Costly Factor**:
     ```dax
     Top Costly Factor = 
     CALCULATE(
-        SELECTEDVALUE('Downtime Factors'[Description]),
-        FILTER(
-            'Line Downtime',
-            'Line Downtime'[Total Cost] = MAX('Line Downtime'[Total Cost])
+    SELECTEDVALUE('downtime-factors'[Description]),
+    FILTER(
+        'line-downtime',
+        'Line-Downtime'[Total Cost] = MAX('line-downtime'[Total Cost])
         )
     )
     ```
