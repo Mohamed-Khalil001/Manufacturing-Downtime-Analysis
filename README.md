@@ -338,25 +338,26 @@ This page provides a high-level overview of weekly performance, focusing on fina
   - **Total Maintenance Cost**:
     ```dax
     Total Maintenance Cost = 
-    IF('Line Downtime'[Downtime Minutes] > 0, 
-       RELATED('Downtime Factors'[Maintenance Cost]), 
-       0)
+    IF('line-downtime'[Downtime(min)] > 0, 
+    RELATED('downtime-factors'[Maintenance Cost $]), 
+    0)
     ```
   - **Total Training Cost**:
     ```dax
     Total Training Cost = 
-    IF('Line Downtime'[Downtime Minutes] > 0, 
-       RELATED('Downtime Factors'[Training Cost]), 
-       0)
+    IF('line-downtime'[Downtime(min)]> 0, 
+    RELATED('downtime-factors'[Training Cost $]), 
+     0)
     ```
 
 ###### 3. Donut Chart - Revenue Lost by Flavor
 - **Description**: Shows revenue losses across product flavors (Orange, Lemon Lime, Cola, Diet Cola).
 - **Purpose**: Highlight flavors most affected by downtime.
 - **Data and DAX**:
-  - Values: `Total Revenue Lost`:
+  - Values: `Revenue Lost`:
     ```dax
-    Total Revenue Lost = SUM('Line Downtime'[Revenue Lost])
+    Revenue Lost = 
+     'line-downtime'[Units Lost] * RELATED('Products'[Price per Unit])
     ```
 
 ###### 4. Horizontal Bar Chart - Operator Errors by Operator
@@ -366,13 +367,13 @@ This page provides a high-level overview of weekly performance, focusing on fina
   - Values: `Operator Errors Count`:
     ```dax
     Operator Errors Count = 
-    CALCULATE(
-        COUNTROWS('Line Downtime'),
+     CALCULATE(
+       COUNTROWS('line-downtime'),
         FILTER(
-            'Downtime Factors',
-            'Downtime Factors'[Operator Error] = "Yes"
-        )
-    )
+        'downtime-factors',
+        'downtime-factors'[Operator Error] = "Yes"
+       )
+     )
     ```
 
 ###### 5. Slicers
@@ -402,10 +403,10 @@ This page provides detailed insights into daily downtime events, cost by product
 - **Data and DAX**:
   - **Total Cost**:
     ```dax
-    Total Cost = 
-    'Line Downtime'[Downtime Cost] +
-    'Line Downtime'[Total Maintenance Cost] +
-    'Line Downtime'[Total Training Cost]
+     Total Cost = 
+     'line-downtime'[Downtime Cost $] + 
+     'line-downtime'[Total Maintenance Cost] + 
+     'line-downtime'[Total Training Cost]
     ```
 
 ###### 2. Treemap - Daily Downtime Events
@@ -416,14 +417,11 @@ This page provides detailed insights into daily downtime events, cost by product
     ```dax
     Daily Downtime Events = 
     CALCULATE(
-        [Total Downtime Events],
-        ALLEXCEPT('Line Productivity', 'Line Productivity'[Day Name])
-    )
+        [Number of Downtime Events],
+         ALLEXCEPT('Line-Productivity', 'line-productivity'[Day of week])
+     )
     ```
-  - **Total Downtime Events**:
-    ```dax
-    Total Downtime Events = COUNTROWS('Line Downtime')
-    ```
+
 
 ###### 3. Line Chart - Downtime Cost by Size (USD)
 - **Description**: Tracks daily downtime costs for 600 ml and 2 L products.
@@ -431,19 +429,18 @@ This page provides detailed insights into daily downtime events, cost by product
 - **Data and DAX**:
   - **Cost by Size 600ml**:
     ```dax
-    Cost by Size 600ml = 
-    CALCULATE(
-        SUM('Line Downtime'[Total Cost]),
-        'Products'[Size] = "600 ml"
-    )
+    Cost by Size 600 ML = 
+     CALCULATE(
+      SUM('Line-Downtime'[Total Cost]),
+     'products'[Size(L)]=0.6) 
     ```
   - **Cost by Size 2L**:
     ```dax
     Cost by Size 2L = 
-    CALCULATE(
-        SUM('Line Downtime'[Total Cost]),
-        'Products'[Size] = "2 L"
-    )
+     CALCULATE(
+      SUM('Line-Downtime'[Total Cost]),
+      'products'[Size(L)]=2)
+      )
     ```
 
 ###### 4. Card - Total Units Lost
@@ -452,16 +449,17 @@ This page provides detailed insights into daily downtime events, cost by product
 - **Data and DAX**:
   - **Total Units Lost**:
     ```dax
-    Total Units Lost = SUM('Line Downtime'[Units Lost])
+    Total Units Lost = 
+      SUM('Line-Downtime'[Units Lost])
     ```
   - **Units Lost**:
     ```dax
-    Units Lost = 
-    IF(
-        RELATED('Products'[Size]) = "600 ml",
-        ('Line Downtime'[Downtime Minutes] / 60) * 2000,
-        ('Line Downtime'[Downtime Minutes] / 60) * 1000
-    )
+     Units Lost = 
+      IF(
+        RELATED('products'[Size(L)]) = 0.6,
+        ('line-downtime'[Downtime(min)] / 60) * 2000,
+        ('line-downtime'[Downtime(min)] / 60) * 1000
+        )
     ```
 
 ###### 5. Slicers
