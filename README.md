@@ -478,7 +478,7 @@ Slicers are synchronized between both pages for consistent filtering.
 
 ---
 ## ![image](https://github.com/user-attachments/assets/bab2824d-2f3b-44ad-a230-a1dc56423364) Stage 5: Data Insights and Story
-## 📌 Insights and Recommendations
+## 1- 📌 Insights and Recommendations
 
 ### ✅ Operational Insights
 
@@ -545,4 +545,4 @@ Slicers are synchronized between both pages for consistent filtering.
 - Compare margin against downtimes to identify the most loss-making lines.
 
 ---
-
+## 2- 📌📖 [the Story ](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/254fc1b20dc1699c789f1f70ae2a23decba05307/%F0%9F%94%B9Stage%205%20Data%20Insights%20and%20Story/The_Story.pdf)
