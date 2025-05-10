@@ -184,8 +184,14 @@ The cleaning process involved standardizing data types, fixing headers, removing
 ## ![image](https://github.com/user-attachments/assets/2b9803ac-6e30-4eb4-8ad2-d906cf3f4f78) Stage 2: Modeling
 
 ### 🎯 Objective
-Define relationships between tables in Power BI to build an integrated data model for accurate analysis.
+Before completing the second part of data transformation inside Power BI, we need to build a solid data model to ensure proper relationships between tables. A well-structured model is essential for enabling accurate analysis, meaningful measures, and smooth transformation logic in Power BI.
 
+### 📝 Context
+Data transformation in this project is divided into two main parts:
+
+#### 1-✅ Part 1 (Power Query): Initial cleaning and standardization of data, which has already been completed.
+#### 2-🔄 Part 2 (Power BI interface): Additional transformations, calculations, and business logic to be applied after the data model is built. 
+ 
 ---
 
 ### 🔗 2.1 Establishing Relationships
@@ -213,6 +219,7 @@ Downtime Factors
 ```
 
 All relationships are **Many-to-One** and ensure clear data flow from raw events to descriptive dimensions.
+![](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/60ccac6a79cdf5fb520d1e20c9c527622854a116/%F0%9F%94%B9Stage%202%20Modeling/Modeling.png)
 
 ---
 
@@ -307,27 +314,10 @@ Total Cost =
 
 **Issue:** 7 Batch IDs in `line-downtime.csv` were not found in `line-productivity.csv`, causing blank values in `RELATED()`-based calculations.
 
-**Solution:**
-- Identified missing Batches
-- Removed them using Power Query filters
+- **Solution**:  
+  - Identified the missing Batch IDs in Power Query.  
+  - Filtered out these batches (instead of removing them) to exclude them from analysis while preserving the original data
 
-**Code Example:**
-```powerquery
-if Table.HasAnyRows(Table.SelectRows(#"Line Productivity", each [Batch] = [Batch])) then "Yes" else "No"
-```
-
-**Documentation Note:**
-> Seven Batch IDs were removed from the Line Downtime table as they were not found in the Line Productivity table, indicating they were not part of the production line. Adding hypothetical data was avoided to maintain data integrity.
-
----
-
-### ▪️ 3.4 Additional Transformations
-
-- **Unpivoting Downtime Table:**
-  - Converted Factor1, Factor2... columns into rows
-- **Index Columns:**
-  - Added to support tracking
-- **Filtered Zero Downtime Records** to improve performance
 
 ---
 
