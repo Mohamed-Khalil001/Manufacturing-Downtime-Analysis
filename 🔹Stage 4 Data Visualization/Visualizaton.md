@@ -14,7 +14,7 @@ This page provides a high-level overview of weekly performance, focusing on fina
 
 ##### 📸 Screenshot of Page 1
 
-![Page 1 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/ba87059bee7d37e3d054bbebdf8b19581a2a2506/%F0%9F%94%B9Stage%204%20Data%20Visualization/1-overview%20.png)
+![Page 1 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/143c0f952d0ca58ee19886d92e43c5a6da6b573c/%F0%9F%94%B9Stage%204%20Data%20Visualization/2-Overview.PNG)
 
 ##### 📝 Annotations for Page 1 Screenshot
 
@@ -126,7 +126,7 @@ This page provides detailed insights into daily downtime events, cost by product
 
 ##### 📸 Screenshot of Page 2
 
-![Page 2 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/ba87059bee7d37e3d054bbebdf8b19581a2a2506/%F0%9F%94%B9Stage%204%20Data%20Visualization/2-insights.png)
+![Page 2 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/143c0f952d0ca58ee19886d92e43c5a6da6b573c/%F0%9F%94%B9Stage%204%20Data%20Visualization/3-insights.PNG)
 
 ##### 📝 Annotations for Page 2 Screenshot
 
