@@ -356,7 +356,7 @@ Create interactive Power BI dashboard to analyze manufacturing downtime, focusin
 This page provides a high-level overview of weekly performance, focusing on financial impacts, key downtime factors, and operator performance.
 
 ##### 📸 Screenshot of Page 1
-![Page 1 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/ba87059bee7d37e3d054bbebdf8b19581a2a2506/%F0%9F%94%B9Stage%204%20Data%20Visualization/1-overview%20.png)
+![Page 1 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/846f7cff7e88482826f4a1228639d45e97a256da/%F0%9F%94%B9Stage%204%20Data%20Visualization/2-Overview.PNG)
 
 ##### 📝 Annotations for Page 1 Screenshot
 1. **KPIs**: Displays key financial and operational metrics.
@@ -460,7 +460,7 @@ This page provides a high-level overview of weekly performance, focusing on fina
 This page provides detailed insights into daily downtime events, cost by product size, and production losses.
 
 ##### 📸 Screenshot of Page 2
-![Page 2 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/ba87059bee7d37e3d054bbebdf8b19581a2a2506/%F0%9F%94%B9Stage%204%20Data%20Visualization/2-insights.png)
+![Page 2 Screenshot](https://github.com/Mohamed-Khalil001/Manufacturing-Downtime-Analysis/blob/846f7cff7e88482826f4a1228639d45e97a256da/%F0%9F%94%B9Stage%204%20Data%20Visualization/3-insights.PNG)
 
 ##### 📝 Annotations for Page 2 Screenshot
 1. **Table**: Lists the top 5 most costly downtime events.
